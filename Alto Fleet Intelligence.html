@@ -1,0 +1,1106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Alto Fleet Intelligence — AI-powered EV fleet operations</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<canvas id="fleet-canvas"></canvas>
+
+<!-- ─────────────────────────── NAV ─────────────────────────── -->
+<nav class="nav" id="nav">
+  <div class="wrap nav-row">
+    <a href="#" class="brand">
+      <span class="brand-mark">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg>
+      </span>
+      <span class="brand-name"><b>Alto</b><span>Fleet</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="#platform">Platform</a>
+      <a href="#agents">Agents</a>
+      <a href="#multi-fleet">Fleets</a>
+      <a href="#telemetry">Telemetry</a>
+      <a href="#sim">Simulator</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#">Docs</a>
+    </div>
+    <div class="nav-cta">
+      <a href="#" class="btn btn-link btn-sm">Sign in</a>
+      <a href="#pricing" class="btn btn-dark btn-sm">Start free
+        <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- ─────────────────────────── HERO ─────────────────────────── -->
+<header class="hero">
+  <div class="hero-bg"></div>
+
+  <div class="wrap hero-inner">
+    <div class="hero-badge" data-reveal>
+      <span class="pulse">●</span>
+      Six AI agents now coordinating in real time
+    </div>
+
+    <h1 class="h1" data-reveal data-reveal-delay="1">AI-powered intelligence<br/>for your <span style="background: linear-gradient(135deg, var(--blue) 0%, var(--emerald) 100%); -webkit-background-clip: text; background-clip: text; color: transparent;">EV fleet</span>.</h1>
+
+    <p class="lead hero-sub" data-reveal data-reveal-delay="2">Real-time routing, charging optimization, and risk prediction&nbsp;— all in one platform. Built for fleet operators who can't afford a missed SLA.</p>
+
+    <div class="hero-ctas" data-reveal data-reveal-delay="3">
+      <a href="#pricing" class="btn btn-primary">Start free trial
+        <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+      <a href="#" class="btn btn-ghost">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+        Watch demo
+      </a>
+    </div>
+
+    <div class="hero-stats" data-reveal data-reveal-delay="4">
+      <span class="stat-pill"><span class="dot"></span><b><span data-count="99.2" data-decimals="1" data-suffix="%">0</span></b> SLA accuracy</span>
+      <span class="stat-pill"><span class="dot blue"></span><b><span data-count="6">0</span></b> AI agents</span>
+      <span class="stat-pill"><span class="dot amber"></span><b>Live</b> tracking</span>
+    </div>
+  </div>
+</header>
+
+<!-- ─────────────────────── 2 · LIVE OPS MAP ─────────────────────── -->
+<section class="section alt" id="platform">
+  <div class="wrap">
+    <div class="grid-2">
+      <div data-reveal="left">
+        <span class="eyebrow">Live operations map</span>
+        <h2 class="h2" style="margin-top:12px;">See every vehicle,<br/>every state of charge,<br/>in one place.</h2>
+        <p class="body">A live picture of your entire fleet — GPS position, battery, ETA, risk score — refreshed every few seconds. Click a vehicle and you have the full context in a single panel.</p>
+
+        <ul class="feat-list">
+          <li>
+            <span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg></span>
+            <div><b>Real-time GPS</b><span>Every vehicle's position on a single map, updating live.</span></div>
+          </li>
+          <li>
+            <span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg></span>
+            <div><b>State of charge on every marker</b><span>SOC % rendered inline so dispatchers spot battery risk at a glance.</span></div>
+          </li>
+          <li>
+            <span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg></span>
+            <div><b>Route lines with intent</b><span>Dashed-dotted routes show where each vehicle is going next.</span></div>
+          </li>
+          <li>
+            <span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg></span>
+            <div><b>One-click vehicle detail</b><span>Speed, heading, ETA, and composite risk in a single side panel.</span></div>
+          </li>
+        </ul>
+
+        <div class="usecase">
+          <span class="usecase-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </span>
+          <div class="usecase-body">
+            <span class="usecase-label">Real-time use case</span>
+            Dispatcher sees <b>Vehicle #7 at 18% SOC</b> — Alto auto-suggests the nearest available charger before the route fails.
+          </div>
+        </div>
+      </div>
+
+      <div class="mock" data-reveal="right" data-reveal-delay="1">
+        <div class="mock-bar">
+          <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+          <span class="title">alto.fleet/operations · live</span>
+        </div>
+        <div style="position:relative;">
+          <img src="assets/alto-operations-map.png" alt="Alto Operations live fleet map" style="width:100%; height:auto; display:block;" />
+          <!-- Vehicle detail overlay -->
+          <div class="map-overlay">
+            <div class="head">
+              <span class="veh-pip">07</span>
+              <div>
+                <div class="veh-name">Vehicle #7 · Lightning</div>
+                <div class="veh-status">● EN ROUTE</div>
+              </div>
+            </div>
+            <div class="row"><span>SOC</span><b style="color:var(--amber);">18%</b></div>
+            <div class="row"><span>Speed</span><b>34 mph</b></div>
+            <div class="row"><span>Heading</span><b>NE · 41°</b></div>
+            <div class="row"><span>ETA</span><b>2:47 PM</b></div>
+            <div class="row"><span>Risk score</span><b style="color:var(--red);">HIGH · 72</b></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────── 3 · 6-AGENT SYSTEM ─────────────────────── -->
+<section class="section" id="agents">
+  <div class="wrap">
+    <div class="section-head center" data-reveal>
+      <span class="eyebrow">AI route optimization</span>
+      <h2 class="h2" style="margin-top:12px;">Six specialist agents.<br/>One composite verdict.</h2>
+      <p class="lead">Before a single vehicle moves, six purpose-built agents score the route from every angle. A storm warning, a clogged DCFC, a tightening SLA window — they all surface in one number.</p>
+    </div>
+
+    <div class="grid-2 start">
+      <div class="agent-grid">
+        <div class="agent-card" data-reveal data-reveal-delay="1">
+          <span class="score" data-count="94">0</span>
+          <div class="icon" style="background:#FEF3C7; color:#B45309;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg>
+          </div>
+          <div class="name">Energy Prediction</div>
+          <div class="desc">Per-km kWh forecasts</div>
+        </div>
+        <div class="agent-card" data-reveal data-reveal-delay="2">
+          <span class="score" data-count="91">0</span>
+          <div class="icon" style="background:#ECFDF5; color:var(--emerald);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.4 14.4 9.6 9.6"/><path d="M18.657 21.485a2 2 0 1 1-2.829-2.828l-1.767 1.768a2 2 0 1 1-2.829-2.829l6.364-6.364a2 2 0 1 1 2.829 2.829l-1.768 1.767a2 2 0 1 1 2.828 2.829z"/><path d="m21.5 21.5-1.4-1.4"/><path d="M3.9 3.9 2.5 2.5"/><path d="M6.404 12.768a2 2 0 1 1-2.829-2.829l1.768-1.767a2 2 0 1 1-2.828-2.829l2.828-2.828a2 2 0 1 1 2.829 2.828l1.767-1.768a2 2 0 1 1 2.829 2.829z"/></svg>
+          </div>
+          <div class="name">Charger Availability</div>
+          <div class="desc">Live DCFC + queue depth</div>
+        </div>
+        <div class="agent-card" data-reveal data-reveal-delay="3">
+          <span class="score warn" data-count="72">0</span>
+          <div class="icon" style="background:#EFF4FF; color:var(--blue-2);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+          </div>
+          <div class="name">SLA Compliance</div>
+          <div class="desc">On-time probability</div>
+        </div>
+        <div class="agent-card" data-reveal data-reveal-delay="4">
+          <span class="score" data-count="88">0</span>
+          <div class="icon" style="background:#FEE2E2; color:#B91C1C;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V7"/><path d="M12 3v18"/><circle cx="7" cy="11" r="1"/><circle cx="17" cy="11" r="1"/></svg>
+          </div>
+          <div class="name">Traffic Risk</div>
+          <div class="desc">Live congestion + accidents</div>
+        </div>
+        <div class="agent-card" data-reveal data-reveal-delay="5">
+          <span class="score bad" data-count="41">0</span>
+          <div class="icon" style="background:#E0F2FE; color:#0369A1;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 18a5 5 0 0 0-10 0"/><path d="M14 9.5a3.5 3.5 0 1 1-5 0"/><path d="M2 22h20"/><path d="M16 22V8"/></svg>
+          </div>
+          <div class="name">Weather Impact</div>
+          <div class="desc">Wind, temp, range derating</div>
+        </div>
+        <div class="agent-card" data-reveal data-reveal-delay="6">
+          <span class="score" data-count="96">0</span>
+          <div class="icon" style="background:#F1F5F9; color:var(--ink-2);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg>
+          </div>
+          <div class="name">Fleet Coordination</div>
+          <div class="desc">Cross-vehicle conflicts</div>
+        </div>
+      </div>
+
+      <div class="gauge-card" data-reveal="right" data-reveal-delay="2">
+        <div class="label">Composite risk · Route #128</div>
+        <div class="value"><span data-count="73">0</span><sub>/100</sub></div>
+        <div class="verdict">▲ Re-optimized · −12 risk · −18 min</div>
+        <div class="gauge-track">
+          <div class="gauge-fill" data-fill="73%"></div>
+        </div>
+        <div class="gauge-marks">
+          <span>0 · LOW</span>
+          <span>50 · MED</span>
+          <span>100 · HIGH</span>
+        </div>
+
+        <div style="margin-top: 32px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.08);">
+          <div style="font-size:12px; color: rgba(255,255,255,0.5); margin-bottom: 12px; letter-spacing: 0.06em; text-transform: uppercase;">Agent contributions</div>
+          <div style="display:flex; flex-direction:column; gap: 10px;">
+            <div style="display:flex; justify-content:space-between; font-size:13px;"><span style="color:rgba(255,255,255,0.7);">⚡ Energy</span><span style="font-family:var(--mono); color:var(--emerald);">94</span></div>
+            <div style="display:flex; justify-content:space-between; font-size:13px;"><span style="color:rgba(255,255,255,0.7);">🌦 Weather</span><span style="font-family:var(--mono); color:var(--red);">41</span></div>
+            <div style="display:flex; justify-content:space-between; font-size:13px;"><span style="color:rgba(255,255,255,0.7);">🚦 Traffic</span><span style="font-family:var(--mono); color:#FCD34D;">88</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="usecase" style="max-width: 900px; margin: 64px auto 0;" data-reveal>
+      <span class="usecase-icon">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+      </span>
+      <div class="usecase-body">
+        <span class="usecase-label">Real-time use case</span>
+        Before departure, all six agents score the route. A storm warning triggers the <b>Weather Agent to flag high risk</b> — the route is re-optimized in seconds, before the driver leaves the depot.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────── 3.5 · MULTI-FLEET ─────────────────────── -->
+<section class="section alt" id="multi-fleet">
+  <div class="wrap">
+    <div class="section-head center" data-reveal>
+      <span class="eyebrow">Multi-fleet route intelligence</span>
+      <h2 class="h2" style="margin-top:12px;">One brain.<br/>Every fleet.</h2>
+      <p class="lead">Route multiple fleets simultaneously — zero charger conflicts, dynamic priority resolution, and cross-fleet SLA balancing.</p>
+    </div>
+
+    <div class="grid-2 start">
+      <!-- ── Animated multi-fleet command view ── -->
+      <div class="mf-mock" data-reveal="left">
+        <svg class="mf-grid" viewBox="0 0 400 360" preserveAspectRatio="none" aria-hidden="true">
+          <defs>
+            <pattern id="mfBlocks" width="40" height="40" patternUnits="userSpaceOnUse">
+              <path d="M0 0H40M0 0V40" fill="none" stroke="rgba(15,23,42,0.05)" stroke-width="1"/>
+            </pattern>
+          </defs>
+          <rect width="400" height="360" fill="url(#mfBlocks)"/>
+        </svg>
+
+        <!-- Coordinator agent card -->
+        <div class="coord-card" data-reveal data-reveal-delay="4">
+          <div class="coord-pulse"></div>
+          <div class="coord-head">
+            <span class="coord-mark">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="9"/></svg>
+            </span>
+            Fleet Coordinator Agent
+          </div>
+          <div class="coord-stats">
+            <span><b><span data-count="3">0</span></b> fleets</span>
+            <span><b><span data-count="12">0</span></b> vehicles</span>
+            <span><b style="color:var(--emerald);">0</b> conflicts</span>
+          </div>
+        </div>
+
+        <!-- Fleet A: blue (delivery, fastest) -->
+        <div class="mf-lane fleet-a" data-reveal="left" data-reveal-delay="1">
+          <div class="lane-head">
+            <span class="lane-pip"></span>
+            <span class="lane-name">Fleet A · Delivery</span>
+            <span class="lane-count">3 vehicles</span>
+          </div>
+          <div class="lane-track">
+            <div class="lane-charger" style="left: 62%;">
+              <span class="bolt">⚡</span><span class="q">2</span>
+            </div>
+            <div class="lane-veh v1"><span class="veh-icon"><svg viewBox="0 0 26 14" fill="currentColor"><rect x="12" y="4" width="10" height="6" rx="1"/><rect x="2" y="5" width="10" height="5" rx="1"/><rect x="4" y="6" width="3" height="2" fill="#fff" opacity="0.85"/><circle cx="6" cy="11.5" r="1.5" fill="#0F172A"/><circle cx="18" cy="11.5" r="1.5" fill="#0F172A"/></svg></span><i>92%</i></div>
+            <div class="lane-veh v2"><span class="veh-icon"><svg viewBox="0 0 26 14" fill="currentColor"><rect x="12" y="4" width="10" height="6" rx="1"/><rect x="2" y="5" width="10" height="5" rx="1"/><rect x="4" y="6" width="3" height="2" fill="#fff" opacity="0.85"/><circle cx="6" cy="11.5" r="1.5" fill="#0F172A"/><circle cx="18" cy="11.5" r="1.5" fill="#0F172A"/></svg></span><i>74%</i></div>
+            <div class="lane-veh v3"><span class="veh-icon"><svg viewBox="0 0 26 14" fill="currentColor"><rect x="12" y="4" width="10" height="6" rx="1"/><rect x="2" y="5" width="10" height="5" rx="1"/><rect x="4" y="6" width="3" height="2" fill="#fff" opacity="0.85"/><circle cx="6" cy="11.5" r="1.5" fill="#0F172A"/><circle cx="18" cy="11.5" r="1.5" fill="#0F172A"/></svg></span><i>58%</i></div>
+          </div>
+        </div>
+
+        <!-- Fleet B: purple (service vans) -->
+        <div class="mf-lane fleet-b" data-reveal="left" data-reveal-delay="2">
+          <div class="lane-head">
+            <span class="lane-pip"></span>
+            <span class="lane-name">Fleet B · Service vans</span>
+            <span class="lane-count">4 vehicles</span>
+          </div>
+          <div class="lane-track">
+            <div class="lane-charger" style="left: 38%;">
+              <span class="bolt">⚡</span><span class="q">1</span>
+            </div>
+            <div class="lane-veh v1"><span class="veh-icon"><svg viewBox="0 0 26 14" fill="currentColor"><path d="M2 6 L4 3.5 H17 V10 H2 Z"/><rect x="5" y="4.6" width="3" height="2.4" fill="#fff" opacity="0.85"/><rect x="9" y="4.6" width="3" height="2.4" fill="#fff" opacity="0.85"/><circle cx="5" cy="11.5" r="1.5" fill="#0F172A"/><circle cx="14" cy="11.5" r="1.5" fill="#0F172A"/></svg></span><i>81%</i></div>
+            <div class="lane-veh v2"><span class="veh-icon"><svg viewBox="0 0 26 14" fill="currentColor"><path d="M2 6 L4 3.5 H17 V10 H2 Z"/><rect x="5" y="4.6" width="3" height="2.4" fill="#fff" opacity="0.85"/><rect x="9" y="4.6" width="3" height="2.4" fill="#fff" opacity="0.85"/><circle cx="5" cy="11.5" r="1.5" fill="#0F172A"/><circle cx="14" cy="11.5" r="1.5" fill="#0F172A"/></svg></span><i>46%</i></div>
+            <!-- Conflict marker — sits at intersection -->
+            <div class="conflict-marker">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg>
+              <span>resolved</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fleet C: green (logistics trucks, slowest) -->
+        <div class="mf-lane fleet-c" data-reveal="left" data-reveal-delay="3">
+          <div class="lane-head">
+            <span class="lane-pip"></span>
+            <span class="lane-name">Fleet C · Logistics</span>
+            <span class="lane-count">5 vehicles</span>
+          </div>
+          <div class="lane-track">
+            <div class="lane-charger" style="left: 72%;">
+              <span class="bolt">⚡</span><span class="q">3</span>
+            </div>
+            <div class="lane-veh v1"><span class="veh-icon"><svg viewBox="0 0 26 14" fill="currentColor"><rect x="8" y="4" width="15" height="6" rx="0.5"/><rect x="1" y="5.5" width="7" height="4.5" rx="0.5"/><rect x="2" y="6.5" width="4" height="2.4" fill="#fff" opacity="0.85"/><circle cx="4" cy="11.5" r="1.3" fill="#0F172A"/><circle cx="12" cy="11.5" r="1.3" fill="#0F172A"/><circle cx="19" cy="11.5" r="1.3" fill="#0F172A"/></svg></span><i>67%</i></div>
+            <div class="lane-veh v2"><span class="veh-icon"><svg viewBox="0 0 26 14" fill="currentColor"><rect x="8" y="4" width="15" height="6" rx="0.5"/><rect x="1" y="5.5" width="7" height="4.5" rx="0.5"/><rect x="2" y="6.5" width="4" height="2.4" fill="#fff" opacity="0.85"/><circle cx="4" cy="11.5" r="1.3" fill="#0F172A"/><circle cx="12" cy="11.5" r="1.3" fill="#0F172A"/><circle cx="19" cy="11.5" r="1.3" fill="#0F172A"/></svg></span><i>34%</i></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Feature list ── -->
+      <div data-reveal="right">
+        <ul class="mf-feats">
+          <li data-reveal data-reveal-delay="1">
+            <span class="mf-ic mf-ic-blue">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-8-7-8-13a8 8 0 0 1 16 0c0 6-8 13-8 13z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            </span>
+            <div>
+              <b>Cross-fleet route deconfliction</b>
+              <span>Detects when two fleets share a corridor or charging stop — auto-staggers departures to eliminate queuing.</span>
+            </div>
+          </li>
+          <li data-reveal data-reveal-delay="2">
+            <span class="mf-ic mf-ic-emerald">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg>
+            </span>
+            <div>
+              <b>Shared charger queue management</b>
+              <span>Allocates DCFC slots across all fleets by SLA priority — urgent deliveries always charge first.</span>
+            </div>
+          </li>
+          <li data-reveal data-reveal-delay="3">
+            <span class="mf-ic mf-ic-purple">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+            </span>
+            <div>
+              <b>Per-fleet SLA profiles</b>
+              <span>Each fleet runs its own SLA rules — a service van and a delivery truck have different thresholds. Alto respects both at once.</span>
+            </div>
+          </li>
+          <li data-reveal data-reveal-delay="4">
+            <span class="mf-ic mf-ic-amber">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/></svg>
+            </span>
+            <div>
+              <b>Dynamic fleet rebalancing</b>
+              <span>When a vehicle goes offline mid-route, Alto redistributes its stops across the nearest available vehicles from any fleet.</span>
+            </div>
+          </li>
+          <li data-reveal data-reveal-delay="5">
+            <span class="mf-ic mf-ic-ink">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+            </span>
+            <div>
+              <b>Unified fleet command dashboard</b>
+              <span>One screen — every fleet, every route, every risk score. Filter by fleet, zone, or risk level.</span>
+            </div>
+          </li>
+          <li data-reveal data-reveal-delay="6">
+            <span class="mf-ic mf-ic-blue">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="9"/></svg>
+            </span>
+            <div>
+              <b>Fleet Coordinator Agent</b>
+              <span>The sixth agent runs continuously across all active fleets — resolving conflicts, balancing load, flagging cross-fleet SLA risks before they escalate.</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ── Use case row ── -->
+    <div class="uc-row">
+      <div class="uc-card uc-blue" data-reveal data-reveal-delay="1">
+        <div class="uc-head">
+          <span class="uc-dot"></span>
+          <span class="uc-label">Charger conflict avoided</span>
+        </div>
+        <p>Fleet A's Vehicle #3 and Fleet C's Truck #7 both route to Downtown Charger at 14:22. The Coordinator detects the clash <b>40 minutes early</b> — staggers Fleet C by 18 minutes. Zero queue, both SLAs intact.</p>
+      </div>
+      <div class="uc-card uc-purple" data-reveal data-reveal-delay="2">
+        <div class="uc-head">
+          <span class="uc-dot"></span>
+          <span class="uc-label">Vehicle offline recovery</span>
+        </div>
+        <p>Fleet B's Van #2 breaks down at 11:05. Alto finds <b>three nearby idle vehicles</b> across Fleet A and C, auto-reassigns four pending stops, customers notified within 90 seconds.</p>
+      </div>
+      <div class="uc-card uc-emerald" data-reveal data-reveal-delay="3">
+        <div class="uc-head">
+          <span class="uc-dot"></span>
+          <span class="uc-label">SLA priority escalation</span>
+        </div>
+        <p>A high-priority medical route enters Fleet C. Alto elevates monitoring to critical, <b>pre-books charger slots</b> along the corridor, and clears conflicting Fleet A routes — automatically.</p>
+      </div>
+    </div>
+
+    <!-- ── Stats strip ── -->
+    <div class="mf-stats" data-reveal>
+      <div>
+        <div class="mf-stat-v">Up to <span data-count="50">0</span></div>
+        <div class="mf-stat-l">Fleets managed simultaneously</div>
+      </div>
+      <div>
+        <div class="mf-stat-v">&lt; <span data-count="2">0</span><span class="u">sec</span></div>
+        <div class="mf-stat-l">Cross-fleet conflict resolution</div>
+      </div>
+      <div>
+        <div class="mf-stat-v"><span data-count="87">0</span><span class="u">%</span></div>
+        <div class="mf-stat-l">Charger queue reduction</div>
+      </div>
+      <div>
+        <div class="mf-stat-v"><span data-count="99.4" data-decimals="1">0</span><span class="u">%</span></div>
+        <div class="mf-stat-l">SLA compliance · all fleets</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────── 4 · CHARGING ─────────────────────── -->
+<section class="section alt">
+  <div class="wrap">
+    <div class="grid-2">
+      <div class="charge-map" data-reveal="left">
+        <svg class="route" viewBox="0 0 400 300" preserveAspectRatio="none">
+          <!-- subtle grid -->
+          <defs>
+            <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+              <path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(15,23,42,0.04)" stroke-width="0.5"/>
+            </pattern>
+          </defs>
+          <rect width="400" height="300" fill="url(#grid)"/>
+          <!-- route path -->
+          <path d="M 30 240 Q 110 200 160 180 T 280 110 T 370 60" fill="none" stroke="#3B82F6" stroke-width="2.5" stroke-dasharray="6 6" stroke-linecap="round" data-draw />
+          <!-- alternate route -->
+          <path d="M 30 240 Q 90 230 150 240 T 280 200 T 370 60" fill="none" stroke="#CBD5E1" stroke-width="1.5" stroke-dasharray="3 5" />
+          <!-- origin / dest -->
+          <circle cx="30" cy="240" r="6" fill="#0F172A"/>
+          <circle cx="370" cy="60" r="6" fill="#10B981"/>
+          <circle cx="370" cy="60" r="14" fill="none" stroke="#10B981" stroke-width="1.5" opacity="0.4"/>
+        </svg>
+        <div class="charge-pin" style="top: 60%; left: 38%;" data-grow data-delay="600">
+          <span class="bolt"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></span>
+          <div class="info"><b>EVgo · Riverside</b><span>CCS · 350 kW · 2 free</span></div>
+        </div>
+        <div class="charge-pin offline" style="top: 38%; left: 60%;" data-grow data-delay="900">
+          <span class="bolt"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg></span>
+          <div class="info"><b>Shell Recharge</b><span>OFFLINE · rerouted</span></div>
+        </div>
+        <div class="charge-pin" style="top: 22%; left: 78%;" data-grow data-delay="1200">
+          <span class="bolt"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></span>
+          <div class="info"><b>Electrify America</b><span>CCS · 150 kW · 8 min wait</span></div>
+        </div>
+      </div>
+
+      <div data-reveal="right" data-reveal-delay="1">
+        <span class="eyebrow">Charging station intelligence</span>
+        <h2 class="h2" style="margin-top:12px;">Never strand<br/>a vehicle again.</h2>
+        <p class="body">Every charger on the route is monitored continuously — connector type, max kW, live availability, queue time. When a station fails mid-route, Alto reroutes around it before the driver notices.</p>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 32px;">
+          <div style="background: #fff; border: 1px solid var(--line); padding: 16px; border-radius: 12px;">
+            <div class="meta">Connector</div>
+            <div style="font-size: 16px; font-weight: 600; margin-top: 4px;">CCS · NACS · CHAdeMO</div>
+          </div>
+          <div style="background: #fff; border: 1px solid var(--line); padding: 16px; border-radius: 12px;">
+            <div class="meta">Max power</div>
+            <div style="font-size: 16px; font-weight: 600; margin-top: 4px;">350 <span style="color: var(--mute); font-size: 13px;">kW</span></div>
+          </div>
+          <div style="background: #fff; border: 1px solid var(--line); padding: 16px; border-radius: 12px;">
+            <div class="meta">Live availability</div>
+            <div style="font-size: 16px; font-weight: 600; margin-top: 4px; color: var(--emerald);">2 of 4 free</div>
+          </div>
+          <div style="background: #fff; border: 1px solid var(--line); padding: 16px; border-radius: 12px;">
+            <div class="meta">Avg queue</div>
+            <div style="font-size: 16px; font-weight: 600; margin-top: 4px;">3 <span style="color: var(--mute); font-size: 13px;">min</span></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <span class="usecase-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </span>
+          <div class="usecase-body">
+            <span class="usecase-label">Real-time use case</span>
+            Mid-route, a charger goes offline. Alto detects it, <b>recalculates the nearest available station</b>, and pushes the updated stop to the driver — zero downtime.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────── 5 · TELEMETRY ─────────────────────── -->
+<section class="section" id="telemetry">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow">Route telemetry &amp; tracking</span>
+      <h2 class="h2" style="margin-top:12px;">Every datapoint,<br/>every second of every route.</h2>
+      <p class="lead" style="max-width: 720px;">SOC, speed, altitude, and energy consumed plotted against a clean timeline. Geofence crossings and charging events are flagged inline so anomalies surface themselves.</p>
+    </div>
+
+    <div class="tele-card" data-reveal data-reveal-delay="1">
+      <div class="tele-head">
+        <div>
+          <div class="meta">Route #128 · Vehicle #7</div>
+          <div style="font-size: 18px; font-weight: 600; margin-top: 4px;">07:22 → 11:48 · 184 km · 4 stops</div>
+        </div>
+        <div class="tele-tabs">
+          <button class="active">SOC %</button>
+          <button>Speed</button>
+          <button>Altitude</button>
+          <button>kWh</button>
+        </div>
+      </div>
+
+      <!-- Chart -->
+      <svg viewBox="0 0 800 240" style="width:100%; height: auto;" preserveAspectRatio="none">
+        <defs>
+          <linearGradient id="socFill" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#3B82F6" stop-opacity="0.18"/>
+            <stop offset="100%" stop-color="#3B82F6" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+        <!-- gridlines -->
+        <g stroke="#EEF2F7" stroke-width="1">
+          <line x1="0" y1="40" x2="800" y2="40"/>
+          <line x1="0" y1="100" x2="800" y2="100"/>
+          <line x1="0" y1="160" x2="800" y2="160"/>
+          <line x1="0" y1="220" x2="800" y2="220"/>
+        </g>
+        <!-- y labels -->
+        <g font-family="JetBrains Mono" font-size="10" fill="#94A3B8">
+          <text x="6" y="44">100%</text>
+          <text x="6" y="104">75%</text>
+          <text x="6" y="164">50%</text>
+          <text x="6" y="224">25%</text>
+        </g>
+        <!-- SOC area -->
+        <path d="M 60 60 L 140 90 L 220 120 L 280 150 L 320 175 L 350 120 L 420 145 L 500 170 L 540 190 L 580 120 L 660 150 L 740 180 L 780 200 L 780 240 L 60 240 Z" fill="url(#socFill)"/>
+        <!-- SOC line -->
+        <path d="M 60 60 L 140 90 L 220 120 L 280 150 L 320 175 L 350 120 L 420 145 L 500 170 L 540 190 L 580 120 L 660 150 L 740 180 L 780 200" fill="none" stroke="#3B82F6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-draw data-duration="2200" />
+        <!-- Charging event (green spike up) -->
+        <g>
+          <line x1="350" y1="20" x2="350" y2="220" stroke="#10B981" stroke-width="1" stroke-dasharray="3 3" opacity="0.5"/>
+          <circle cx="350" cy="120" r="4" fill="#10B981"/>
+          <text x="358" y="32" font-family="Inter" font-size="11" font-weight="600" fill="#10B981">⚡ Charging · +30%</text>
+        </g>
+        <g>
+          <line x1="580" y1="20" x2="580" y2="220" stroke="#10B981" stroke-width="1" stroke-dasharray="3 3" opacity="0.5"/>
+          <circle cx="580" cy="120" r="4" fill="#10B981"/>
+          <text x="588" y="32" font-family="Inter" font-size="11" font-weight="600" fill="#10B981">⚡ Charging · +28%</text>
+        </g>
+        <!-- Geofence event -->
+        <g>
+          <line x1="500" y1="20" x2="500" y2="220" stroke="#F59E0B" stroke-width="1" stroke-dasharray="3 3" opacity="0.5"/>
+          <circle cx="500" cy="170" r="4" fill="#F59E0B"/>
+          <text x="430" y="200" font-family="Inter" font-size="11" font-weight="600" fill="#B45309">⚠ Geofence cross</text>
+        </g>
+        <!-- x labels -->
+        <g font-family="JetBrains Mono" font-size="10" fill="#94A3B8">
+          <text x="60" y="236">07:22</text>
+          <text x="220" y="236">08:30</text>
+          <text x="420" y="236">09:45</text>
+          <text x="580" y="236">10:50</text>
+          <text x="740" y="236">11:48</text>
+        </g>
+      </svg>
+
+      <div class="tele-stats">
+        <div><div class="l">Energy consumed</div><div class="v"><span data-count="52.4" data-decimals="1">0</span><span class="u">kWh</span></div></div>
+        <div><div class="l">Avg speed</div><div class="v"><span data-count="41">0</span><span class="u">mph</span></div></div>
+        <div><div class="l">Peak altitude</div><div class="v"><span data-count="312">0</span><span class="u">m</span></div></div>
+        <div><div class="l">Events flagged</div><div class="v"><span data-count="3">0</span><span class="u">2 geofence · 1 spike</span></div></div>
+      </div>
+    </div>
+
+    <div class="usecase" style="margin-top: 32px;" data-reveal>
+      <span class="usecase-icon">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+      </span>
+      <div class="usecase-body">
+        <span class="usecase-label">Real-time use case</span>
+        An ops manager reviews last night's route — Alto has already <b>flagged two geofence violations and an unusual energy spike</b>, with the telemetry segment cued up.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────── 6 · WHAT-IF SIM ─────────────────────── -->
+<section class="section alt" id="sim">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow">What-if scenario simulator</span>
+      <h2 class="h2" style="margin-top:12px;">Stress-test the route<br/>before you commit a vehicle.</h2>
+      <p class="lead" style="max-width: 720px;">Run any combination of vehicle config, departure time, and weather against your network. Compare current vs. simulated side-by-side in seconds — no road, no risk.</p>
+    </div>
+
+    <div class="sim-split">
+      <div class="sim-side" data-reveal="left">
+        <div class="sim-label">Current route</div>
+        <svg viewBox="0 0 400 140" style="width:100%; height: auto;">
+          <path d="M 20 110 Q 80 80 140 90 T 260 50 T 380 30" fill="none" stroke="#94A3B8" stroke-width="2" stroke-dasharray="4 4"/>
+          <circle cx="20" cy="110" r="5" fill="#64748B"/>
+          <circle cx="380" cy="30" r="5" fill="#64748B"/>
+          <circle cx="180" cy="80" r="3" fill="#64748B"/>
+          <circle cx="280" cy="48" r="3" fill="#64748B"/>
+        </svg>
+        <div class="sim-metrics" style="margin-top: 20px;">
+          <div class="sim-metric"><span class="k">Distance</span><span class="v">184 km</span></div>
+          <div class="sim-metric"><span class="k">Energy cost</span><span class="v">$28.40</span></div>
+          <div class="sim-metric"><span class="k">SLA risk</span><span class="v bad">HIGH · 67%</span></div>
+          <div class="sim-metric"><span class="k">Charging stops</span><span class="v">3</span></div>
+          <div class="sim-metric"><span class="k">ETA</span><span class="v">11:48 AM</span></div>
+        </div>
+      </div>
+      <div class="sim-side alt" data-reveal="right" data-reveal-delay="1">
+        <div class="sim-label">Simulated · +30 min depart, no storm</div>
+        <svg viewBox="0 0 400 140" style="width:100%; height: auto;">
+          <path d="M 20 110 Q 100 60 180 70 T 320 40 T 380 30" fill="none" stroke="#3B82F6" stroke-width="2.5" stroke-dasharray="6 6" data-draw data-duration="1600" />
+          <circle cx="20" cy="110" r="5" fill="#0F172A"/>
+          <circle cx="380" cy="30" r="5" fill="#10B981"/>
+          <circle cx="180" cy="70" r="3" fill="#10B981"/>
+          <circle cx="320" cy="40" r="3" fill="#10B981"/>
+        </svg>
+        <div class="sim-metrics" style="margin-top: 20px;">
+          <div class="sim-metric"><span class="k">Distance</span><span class="v">172 km</span></div>
+          <div class="sim-metric"><span class="k">Energy cost</span><span class="v good">$24.10 · −15%</span></div>
+          <div class="sim-metric"><span class="k">SLA risk</span><span class="v good">LOW · 94%</span></div>
+          <div class="sim-metric"><span class="k">Charging stops</span><span class="v good">2 · −1</span></div>
+          <div class="sim-metric"><span class="k">ETA</span><span class="v good">11:31 AM</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="usecase" data-reveal>
+      <span class="usecase-icon">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+      </span>
+      <div class="usecase-body">
+        <span class="usecase-label">Real-time use case</span>
+        Planning a new delivery corridor? Simulate it — <b>compare energy cost, SLA risk, and charging stops</b> before you commit a single vehicle to the road.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────── 7 · FLEET REGISTRY ─────────────────────── -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow">Fleet vehicle registry</span>
+      <h2 class="h2" style="margin-top:12px;">Every vehicle, every spec,<br/>every degradation curve.</h2>
+      <p class="lead" style="max-width: 720px;">Live status, battery condition, and maintenance flags for the entire fleet. Sort by anything. Act on whichever vehicle needs you most.</p>
+    </div>
+
+    <div class="fleet-grid">
+      <div class="vehicle-card" data-reveal data-reveal-delay="1">
+        <div class="top">
+          <div>
+            <div class="name">Lightning · #07</div>
+            <div class="model">Ford F-150 Lightning XLT</div>
+          </div>
+          <span class="badge en-route">EN ROUTE</span>
+        </div>
+        <div class="battery"><div class="bar"><div class="fill low" data-fill="18%"></div></div><span class="v">18%</span></div>
+        <div class="specs">
+          <div><div class="k">Capacity</div><div class="v">131 kWh</div></div>
+          <div><div class="k">Max range</div><div class="v">320 mi</div></div>
+          <div><div class="k">Degradation</div><div class="v" style="color:var(--amber);">0.87</div></div>
+          <div><div class="k">Last service</div><div class="v">12d ago</div></div>
+        </div>
+      </div>
+
+      <div class="vehicle-card" data-reveal data-reveal-delay="2">
+        <div class="top">
+          <div>
+            <div class="name">Cyan · #12</div>
+            <div class="model">Rivian R1T Adventure</div>
+          </div>
+          <span class="badge charging">CHARGING</span>
+        </div>
+        <div class="battery"><div class="bar"><div class="fill" data-fill="64%"></div></div><span class="v">64%</span></div>
+        <div class="specs">
+          <div><div class="k">Capacity</div><div class="v">135 kWh</div></div>
+          <div><div class="k">Max range</div><div class="v">328 mi</div></div>
+          <div><div class="k">Degradation</div><div class="v">0.94</div></div>
+          <div><div class="k">Last service</div><div class="v">31d ago</div></div>
+        </div>
+      </div>
+
+      <div class="vehicle-card" data-reveal data-reveal-delay="3">
+        <div class="top">
+          <div>
+            <div class="name">Aurora · #03</div>
+            <div class="model">Mercedes eSprinter Cargo</div>
+          </div>
+          <span class="badge idle">IDLE</span>
+        </div>
+        <div class="battery"><div class="bar"><div class="fill" data-fill="92%"></div></div><span class="v">92%</span></div>
+        <div class="specs">
+          <div><div class="k">Capacity</div><div class="v">113 kWh</div></div>
+          <div><div class="k">Max range</div><div class="v">249 mi</div></div>
+          <div><div class="k">Degradation</div><div class="v">0.98</div></div>
+          <div><div class="k">Last service</div><div class="v">4d ago</div></div>
+        </div>
+      </div>
+
+      <div class="vehicle-card" data-reveal data-reveal-delay="4">
+        <div class="top">
+          <div>
+            <div class="name">Phoenix · #21</div>
+            <div class="model">Volvo VNR Electric</div>
+          </div>
+          <span class="badge en-route">EN ROUTE</span>
+        </div>
+        <div class="battery"><div class="bar"><div class="fill" data-fill="54%"></div></div><span class="v">54%</span></div>
+        <div class="specs">
+          <div><div class="k">Capacity</div><div class="v">565 kWh</div></div>
+          <div><div class="k">Max range</div><div class="v">275 mi</div></div>
+          <div><div class="k">Degradation</div><div class="v">0.91</div></div>
+          <div><div class="k">Last service</div><div class="v">8d ago</div></div>
+        </div>
+      </div>
+
+      <div class="vehicle-card" data-reveal data-reveal-delay="5">
+        <div class="top">
+          <div>
+            <div class="name">Halo · #16</div>
+            <div class="model">Tesla Semi · Standard</div>
+          </div>
+          <span class="badge warn">SERVICE DUE</span>
+        </div>
+        <div class="battery"><div class="bar"><div class="fill crit" data-fill="8%"></div></div><span class="v">8%</span></div>
+        <div class="specs">
+          <div><div class="k">Capacity</div><div class="v">900 kWh</div></div>
+          <div><div class="k">Max range</div><div class="v">500 mi</div></div>
+          <div><div class="k">Degradation</div><div class="v" style="color:var(--red);">0.82</div></div>
+          <div><div class="k">Last service</div><div class="v">96d ago</div></div>
+        </div>
+      </div>
+
+      <div class="vehicle-card" data-reveal data-reveal-delay="6">
+        <div class="top">
+          <div>
+            <div class="name">Echo · #08</div>
+            <div class="model">BrightDrop Zevo 600</div>
+          </div>
+          <span class="badge offline">OFFLINE</span>
+        </div>
+        <div class="battery"><div class="bar"><div class="fill" style="width:0%;"></div></div><span class="v">—</span></div>
+        <div class="specs">
+          <div><div class="k">Capacity</div><div class="v">165 kWh</div></div>
+          <div><div class="k">Max range</div><div class="v">250 mi</div></div>
+          <div><div class="k">Degradation</div><div class="v">0.96</div></div>
+          <div><div class="k">Last service</div><div class="v">19d ago</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="usecase">
+      <span class="usecase-icon">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+      </span>
+      <div class="usecase-body">
+        <span class="usecase-label">Real-time use case</span>
+        Fleet manager sees <b>three vehicles with degradation factor &gt; 0.85</b> — schedules maintenance before any of them drop below SLA range.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────── 8 · ZONES ─────────────────────── -->
+<section class="section alt">
+  <div class="wrap">
+    <div class="grid-2">
+      <div data-reveal="left">
+        <span class="eyebrow">Store zone &amp; territory coverage</span>
+        <h2 class="h2" style="margin-top:12px;">Find the gap before<br/>a customer does.</h2>
+        <p class="body">Define coverage by radius, polygon, or ZIP — then overlay live demand. Coverage gaps light up in amber and red so you know exactly where to put the next depot.</p>
+
+        <div style="display: flex; gap: 8px; margin-top: 28px; flex-wrap: wrap;">
+          <span class="stat-pill"><span class="dot" style="background:#3B82F6;box-shadow:0 0 0 4px var(--blue-soft);"></span>4 depots active</span>
+          <span class="stat-pill"><span class="dot amber"></span>2 coverage gaps</span>
+          <span class="stat-pill"><span class="dot blue"></span>18 zones</span>
+        </div>
+
+        <div class="usecase">
+          <span class="usecase-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </span>
+          <div class="usecase-body">
+            <span class="usecase-label">Real-time use case</span>
+            Coverage gap detected in the northeast zone — drop a <b>what-if location pin</b> to instantly see how a new depot would resolve the gap.
+          </div>
+        </div>
+      </div>
+
+      <div class="zone-map" data-reveal="right" data-reveal-delay="1">
+        <svg viewBox="0 0 400 300" style="width:100%; height:100%;" preserveAspectRatio="none">
+          <defs>
+            <pattern id="grid2" width="20" height="20" patternUnits="userSpaceOnUse">
+              <path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(15,23,42,0.04)" stroke-width="0.5"/>
+            </pattern>
+            <radialGradient id="hotZone" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#EF4444" stop-opacity="0.32"/>
+              <stop offset="60%" stop-color="#F59E0B" stop-opacity="0.18"/>
+              <stop offset="100%" stop-color="#F59E0B" stop-opacity="0"/>
+            </radialGradient>
+            <radialGradient id="warmZone" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#F59E0B" stop-opacity="0.2"/>
+              <stop offset="100%" stop-color="#F59E0B" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <rect width="400" height="300" fill="url(#grid2)"/>
+
+          <!-- Territory polygons -->
+          <path d="M 50 80 L 130 60 L 190 100 L 170 170 L 80 180 Z" fill="rgba(59,130,246,0.08)" stroke="#3B82F6" stroke-width="1.5" stroke-dasharray="4 3"/>
+          <path d="M 190 100 L 290 80 L 340 140 L 310 220 L 220 230 L 170 170 Z" fill="rgba(16,185,129,0.08)" stroke="#10B981" stroke-width="1.5" stroke-dasharray="4 3"/>
+          <path d="M 80 180 L 170 170 L 220 230 L 200 270 L 100 260 Z" fill="rgba(59,130,246,0.08)" stroke="#3B82F6" stroke-width="1.5" stroke-dasharray="4 3"/>
+
+          <!-- Heatmap blobs -->
+          <ellipse cx="260" cy="150" rx="80" ry="60" fill="url(#hotZone)"/>
+          <ellipse cx="120" cy="120" rx="60" ry="50" fill="url(#warmZone)"/>
+          <ellipse cx="350" cy="50" rx="50" ry="40" fill="url(#hotZone)"/>
+
+          <!-- Depot pins -->
+          <g>
+            <circle cx="120" cy="120" r="8" fill="#0F172A"/>
+            <circle cx="120" cy="120" r="3" fill="#fff"/>
+            <text x="132" y="116" font-family="Inter" font-size="11" font-weight="600" fill="#0F172A">Depot A</text>
+          </g>
+          <g>
+            <circle cx="240" cy="180" r="8" fill="#0F172A"/>
+            <circle cx="240" cy="180" r="3" fill="#fff"/>
+            <text x="252" y="184" font-family="Inter" font-size="11" font-weight="600" fill="#0F172A">Depot B</text>
+          </g>
+          <g>
+            <circle cx="150" cy="240" r="8" fill="#0F172A"/>
+            <circle cx="150" cy="240" r="3" fill="#fff"/>
+          </g>
+
+          <!-- What-if pin -->
+          <g>
+            <circle cx="345" cy="55" r="10" fill="#3B82F6"/>
+            <circle cx="345" cy="55" r="16" fill="none" stroke="#3B82F6" stroke-width="1.5" stroke-dasharray="3 3"/>
+            <text x="290" y="40" font-family="Inter" font-size="11" font-weight="600" fill="#1E40AF">+ what-if depot</text>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────── 9 · SLA DASHBOARD ─────────────────────── -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow">SLA &amp; risk intelligence</span>
+      <h2 class="h2" style="margin-top:12px;">Risk surfaces<br/>before the driver leaves.</h2>
+      <p class="lead" style="max-width: 720px;">A single dashboard that aggregates every signal — on-time probability, vehicles at risk, active routes — and pulses critical alerts the moment thresholds are crossed.</p>
+    </div>
+
+    <div class="kpi-grid">
+      <div class="kpi-card" data-reveal data-reveal-delay="1">
+        <div class="l">On-time delivery</div>
+        <div class="v"><span data-count="99.2" data-decimals="1">0</span><span class="u">%</span></div>
+        <div class="trend up">▲ +0.4 vs. last week</div>
+        <svg class="spark" viewBox="0 0 100 40" preserveAspectRatio="none">
+          <path d="M 0 30 L 12 26 L 24 22 L 36 28 L 48 18 L 60 14 L 72 10 L 84 12 L 100 6" fill="none" stroke="#10B981" stroke-width="1.8" data-draw data-duration="1400" />
+        </svg>
+      </div>
+      <div class="kpi-card" data-reveal data-reveal-delay="2">
+        <div class="l">Avg risk score</div>
+        <div class="v"><span data-count="34">0</span><span class="u">/100</span></div>
+        <div class="trend down">▼ −6 vs. last week</div>
+        <svg class="spark" viewBox="0 0 100 40" preserveAspectRatio="none">
+          <path d="M 0 12 L 12 18 L 24 14 L 36 20 L 48 24 L 60 22 L 72 28 L 84 26 L 100 30" fill="none" stroke="#3B82F6" stroke-width="1.8" data-draw data-duration="1400" />
+        </svg>
+      </div>
+      <div class="kpi-card" data-reveal data-reveal-delay="3">
+        <div class="l">Active routes</div>
+        <div class="v"><span data-count="142">0</span></div>
+        <div class="trend up">▲ +18 vs. yesterday</div>
+        <svg class="spark" viewBox="0 0 100 40" preserveAspectRatio="none">
+          <path d="M 0 24 L 12 22 L 24 26 L 36 20 L 48 22 L 60 14 L 72 16 L 84 10 L 100 8" fill="none" stroke="#3B82F6" stroke-width="1.8" data-draw data-duration="1400" />
+        </svg>
+      </div>
+      <div class="kpi-card" data-reveal data-reveal-delay="4">
+        <div class="l">Vehicles at risk</div>
+        <div class="v" style="color:var(--amber);"><span data-count="7">0</span></div>
+        <div class="trend" style="color:var(--amber);">2 critical · 5 high</div>
+        <svg class="spark" viewBox="0 0 100 40" preserveAspectRatio="none">
+          <path d="M 0 28 L 12 26 L 24 22 L 36 18 L 48 20 L 60 16 L 72 14 L 84 18 L 100 12" fill="none" stroke="#F59E0B" stroke-width="1.8" data-draw data-duration="1400" />
+        </svg>
+      </div>
+    </div>
+
+    <div class="risk-row" data-reveal>
+      <span class="risk-badge low"><span class="pip"></span>LOW <span class="count">· 89</span></span>
+      <span class="risk-badge med"><span class="pip"></span>MEDIUM <span class="count">· 46</span></span>
+      <span class="risk-badge high"><span class="pip"></span>HIGH <span class="count">· 5</span></span>
+      <span class="risk-badge crit"><span class="pip"></span>CRITICAL <span class="count">· 2</span></span>
+    </div>
+
+    <div class="usecase" style="margin-top: 40px;">
+      <span class="usecase-icon">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+      </span>
+      <div class="usecase-body">
+        <span class="usecase-label">Real-time use case</span>
+        Critical weather alert for <b>Route #12</b> — the SLA agent calculates a 67% on-time probability. Operations is notified <b>before the driver even departs</b>.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────── 10 · PRICING ─────────────────────── -->
+<section class="section alt" id="pricing">
+  <div class="wrap">
+    <div class="section-head center" data-reveal>
+      <span class="eyebrow">Pricing</span>
+      <h2 class="h2" style="margin-top:12px;">Three tiers.<br/>Built for the size of your fleet.</h2>
+      <p class="lead">From a pilot of ten vehicles to a continental operation. No per-driver fees, no quarterly minimum.</p>
+    </div>
+
+    <div class="price-grid">
+      <div class="price-card" data-reveal data-reveal-delay="1">
+        <div class="tier">Starter</div>
+        <div class="amt">$8<span>/ vehicle / mo</span></div>
+        <div class="desc">For pilots and small fleets up to 25 vehicles.</div>
+        <ul class="feat-list">
+          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg></span><div><b>Live operations map</b></div></li>
+          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg></span><div><b>Energy + charger agents</b><span>Two of six AI agents</span></div></li>
+          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg></span><div><b>30-day telemetry retention</b></div></li>
+          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg></span><div><b>Email support</b></div></li>
+        </ul>
+        <a href="#" class="btn btn-ghost">Start free trial</a>
+      </div>
+
+      <div class="price-card featured" data-reveal data-reveal-delay="2">
+        <div class="tier">Professional <span class="pill">Most popular</span></div>
+        <div class="amt">$22<span>/ vehicle / mo</span></div>
+        <div class="desc">For operating fleets from 25 to 500 vehicles.</div>
+        <ul class="feat-list">
+          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg></span><div><b>Everything in Starter, plus</b></div></li>
+          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg></span><div><b>All six AI agents</b><span>Energy, charger, SLA, traffic, weather, coordination</span></div></li>
+          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg></span><div><b>What-if scenario simulator</b></div></li>
+          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg></span><div><b>1-year telemetry retention</b></div></li>
+          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg></span><div><b>Slack + priority support</b></div></li>
+        </ul>
+        <a href="#" class="btn btn-primary">Start free trial</a>
+      </div>
+
+      <div class="price-card" data-reveal data-reveal-delay="3">
+        <div class="tier">Enterprise</div>
+        <div class="amt">Custom</div>
+        <div class="desc">For continental operations &amp; regulated fleets.</div>
+        <ul class="feat-list">
+          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg></span><div><b>Everything in Professional, plus</b></div></li>
+          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg></span><div><b>Custom agent pipelines</b><span>Bring your own ML models &amp; data sources</span></div></li>
+          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg></span><div><b>Single tenant + VPC peering</b></div></li>
+          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg></span><div><b>99.95% uptime SLA</b></div></li>
+          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg></span><div><b>Named account team</b></div></li>
+        </ul>
+        <a href="#" class="btn btn-dark">Contact sales</a>
+      </div>
+    </div>
+
+    <!-- Final CTA -->
+    <div class="final-cta" style="margin-top: 96px;" data-reveal="scale">
+      <h2 class="h2">Deploy Alto Fleet<br/>Intelligence today.</h2>
+      <p class="lead">Onboard your first ten vehicles in under an hour. No card, no commitment.</p>
+
+      <!-- Converging vehicles to depot -->
+      <svg class="depot-svg" viewBox="0 0 480 120">
+        <defs>
+          <radialGradient id="depotGlow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#3B82F6" stop-opacity="0.5"/>
+            <stop offset="100%" stop-color="#3B82F6" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <!-- glow -->
+        <circle cx="240" cy="60" r="60" fill="url(#depotGlow)"/>
+        <!-- routes converging -->
+        <path d="M 20 20 Q 130 30 220 56" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1.2" stroke-dasharray="4 4"/>
+        <path d="M 20 100 Q 130 90 220 64" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1.2" stroke-dasharray="4 4"/>
+        <path d="M 460 20 Q 350 30 260 56" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1.2" stroke-dasharray="4 4"/>
+        <path d="M 460 100 Q 350 90 260 64" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1.2" stroke-dasharray="4 4"/>
+        <!-- vehicles -->
+        <g fill="#fff">
+          <rect x="40" y="16" width="14" height="5" rx="1.5"/>
+          <rect x="40" y="96" width="14" height="5" rx="1.5"/>
+          <rect x="425" y="16" width="14" height="5" rx="1.5"/>
+          <rect x="425" y="96" width="14" height="5" rx="1.5"/>
+        </g>
+        <!-- depot -->
+        <rect x="220" y="44" width="40" height="32" rx="6" fill="#3B82F6"/>
+        <path d="M 232 56 L 240 50 L 248 56 L 248 70 L 232 70 Z" fill="#fff"/>
+        <circle cx="240" cy="64" r="2" fill="#3B82F6"/>
+      </svg>
+
+      <div class="hero-ctas">
+        <a href="#" class="btn btn-primary">Start free trial
+          <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#" class="btn btn-ghost" style="background:rgba(255,255,255,0.06); color:#fff; border-color:rgba(255,255,255,0.2);">Talk to sales</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────── FOOTER ─────────────────────── -->
+<footer>
+  <div class="wrap">
+    <div class="brand">
+      <span class="brand-mark">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg>
+      </span>
+      <span class="brand-name"><b>Alto</b><span>Fleet</span></span>
+    </div>
+    <div class="legal">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Security</a>
+      <a href="#">Status</a>
+      <a href="#">© 2026 Alto Systems</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Scroll to top -->
+<button id="to-top" aria-label="Scroll to top" type="button">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<!-- Cursor spotlight (sits above content) -->
+<div id="cursor-light" aria-hidden="true"></div>
+
+<script>
+  // Nav shadow on scroll
+  const nav = document.getElementById('nav');
+  const toTop = document.getElementById('to-top');
+  window.addEventListener('scroll', () => {
+    const y = window.scrollY;
+    nav.classList.toggle('scrolled', y > 8);
+    toTop.classList.toggle('visible', y > 600);
+  }, { passive: true });
+  toTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // Cursor spotlight — DOM element above content so the blue glow
+  // shows over section backgrounds too. Eased follow.
+  (() => {
+    const light = document.getElementById('cursor-light');
+    if (!light || matchMedia('(hover: none)').matches) return;
+    const half = 180; // half of 360px
+    let tx = -9999, ty = -9999, x = -9999, y = -9999, has = false;
+    window.addEventListener('pointermove', (e) => {
+      tx = e.clientX; ty = e.clientY;
+      if (!has) {
+        has = true;
+        x = tx; y = ty;
+        light.classList.add('on');
+      }
+    }, { passive: true });
+    window.addEventListener('pointerleave', () => {
+      has = false;
+      light.classList.remove('on');
+    });
+    function tick() {
+      if (has) {
+        x += (tx - x) * 0.18;
+        y += (ty - y) * 0.18;
+        light.style.transform = `translate3d(${x - half}px, ${y - half}px, 0)`;
+      }
+      requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  })();
+</script>
+<script src="fleet-canvas.js"></script>
+<script src="reveal.js"></script>
+
+</body>
+</html>
