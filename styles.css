@@ -1208,3 +1208,10 @@ footer {
 footer .wrap { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px; }
 footer .legal { display: flex; gap: 24px; }
 footer .legal a:hover { color: var(--ink); }
+
+
+.logo-img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
